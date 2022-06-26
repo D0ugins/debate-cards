@@ -13,7 +13,7 @@ export default async ({ url, roundId, gid }: RoundInfo): Promise<{ gid: string }
     const { wiki, school, team, side, tournament, roundNum } = data;
     onAddRound.emit({
       url: data.openSourceUrl,
-      filePath: path.join(process.env.DOCUMENT_PATH, wiki, school, team, side, `${tournament}-Round${roundNum}.docx`),
+      filePath: path.join('documents', wiki, school, team, side, `${tournament}-Round${roundNum}.docx`),
       evidenceSet: wiki,
     });
   }
