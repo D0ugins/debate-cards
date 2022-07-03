@@ -16,14 +16,14 @@ export interface RoundInfo {
   gid: string;
 }
 
-const getCites = async (pageUrl: string, citeNums: string): Promise<string[]> => {
+const getCites = async (pageUrl: string, citeNums: string): Promise<string> => {
   const cites = [];
   for (const num of citeNums.split(',')) {
     if (!num) continue;
     const cite = await wikiRequest(`${pageUrl}/objects/Caselist.CitesClass/${num}/properties/Cites`, CITE);
     if (!('err' in cite)) cites.push(cite.value);
   }
-  return cites;
+  return cites.join('\n\n');
 };
 
 export const loadRound = async (pageUrl: string, roundId: number): Promise<Omit<Prisma.RoundCreateInput, 'gid'>> => {

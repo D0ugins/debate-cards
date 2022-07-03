@@ -67,7 +67,7 @@ model Round {
   judge      String
 
   roundReport String?
-  cites       String[]
+  cites       String
 
   openSourceUrl String?
   openSource    File?   @relation(fields: [openSourceId], references: [gid])

@@ -1,0 +1,146 @@
+[
+    {
+        "database": "debate-cards",
+        "index": "evidence",
+        "settings": {
+            "analysis": {
+                "analyzer": {
+                    "type": "language",
+                    "language": "English"
+                }
+            }
+        },
+        "nodes": {
+            "table": "Evidence",
+            "columns": [
+                "id",
+                "gid",
+                "tag",
+                "cite",
+                "fullcite",
+                "summary",
+                "spoken",
+                "fulltext",
+                "markup",
+                "pocket",
+                "hat",
+                "block",
+                "fileId",
+                "bucketId"
+            ],
+            "transform": {
+                "mapping": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "gid": {
+                        "type": "keyword"
+                    },
+                    "tag": {
+                        "type": "text"
+                    },
+                    "cite": {
+                        "type": "text"
+                    },
+                    "fullcite": {
+                        "type": "text"
+                    },
+                    "summary": {
+                        "type": "text"
+                    },
+                    "spoken": {
+                        "type": "text"
+                    },
+                    "fulltext": {
+                        "type": "text"
+                    },
+                    "markup": {
+                        "type": "text",
+                        "index": false
+                    },
+                    "pocket": {
+                        "type": "text"
+                    },
+                    "hat": {
+                        "type": "text"
+                    },
+                    "block": {
+                        "type": "text"
+                    },
+                    "fileId": {
+                        "type": "integer"
+                    },
+                    "bucketId": {
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "database": "debate-cards",
+        "index": "round",
+        "settings": {
+            "analysis": {
+                "analyzer": {
+                    "type": "language",
+                    "language": "English"
+                }
+            }
+        },
+        "nodes": {
+            "table": "Round",
+            "columns": [
+                "id",
+                "gid",
+                "wiki",
+                "school",
+                "team",
+                "side",
+                "entryDate",
+                "tournament",
+                "roundNum",
+                "opponent",
+                "judge",
+                "roundReport",
+                "cites",
+                "openSourceUrl",
+                "openSourceId"
+            ],
+            "transform": {
+                "mapping": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "gid": {
+                        "type": "keyword"
+                    },
+                    "wiki": {
+                        "type": "keyword"
+                    },
+                    "side": {
+                        "type": "keyword"
+                    },
+                    "entryDate": {
+                        "type": "date"
+                    },
+                    "roundNum": {
+                        "type": "keyword"
+                    },
+                    "roundReport": {
+                        "type": "text"
+                    },
+                    "cites": {
+                        "type": "text"
+                    },
+                    "openSourceUrl": {
+                        "type": "keyword"
+                    },
+                    "openSourceId": {
+                        "type": "keyword"
+                    }
+                }
+            }
+        }
+    }
+]
