@@ -43,6 +43,6 @@ export class Round implements Partial<RoundModel> {
   @Field({ nullable: true })
   cites: string | null;
 
-  @Field({ nullable: true })
+  @Field((type) => File, { nullable: true })
   openSource: File | null;
 }

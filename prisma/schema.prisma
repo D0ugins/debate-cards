@@ -15,11 +15,6 @@ model EvidenceBucket {
   root   Evidence @relation("root", fields: [rootId], references: [id])
 
   evidence Evidence[] @relation("evidence")
-
-  // evidence   Evidence[]
-  // evidenceId Int?
-  // Evidence   Evidence? @relation(fields: [evidenceId], references: [id])
-  // evidenceId Int?
 }
 
 model Evidence {
@@ -89,7 +84,7 @@ model File {
 
   evidence Evidence[]
   tags     Tags[]
-  Rounds   Round[]
+  rounds   Round[]
 }
 
 model EvidenceSet {
