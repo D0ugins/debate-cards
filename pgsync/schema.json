@@ -36,7 +36,17 @@
                     ],
                     "relationship": {
                         "variant": "object",
-                        "type": "one_to_many"
+                        "type": "one_to_one"
+                    }
+                },
+                {
+                    "table": "EvidenceBucket",
+                    "columns": [
+                        "count"
+                    ],
+                    "relationship": {
+                        "variant": "object",
+                        "type": "one_to_one"
                     }
                 }
             ],
