@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { Field, ID, ObjectType } from 'type-graphql';
+import { Field, ID, Int, ObjectType } from 'type-graphql';
 import { EvidenceBucket as EvidenceBucketSchema } from '@prisma/client';
 import { Evidence } from './evidence';
 
@@ -7,6 +7,9 @@ import { Evidence } from './evidence';
 export class EvidenceBucket implements Partial<EvidenceBucketSchema> {
   @Field((type) => ID)
   id: number;
+
+  @Field((type) => Int)
+  count: number;
 
   @Field((type) => [Evidence])
   evidence: Evidence[];
