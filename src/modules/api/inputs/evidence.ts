@@ -1,4 +1,4 @@
-import { ArgsType, Field, Float, InputType, registerEnumType } from 'type-graphql';
+import { ArgsType, Field, Float, InputType, Int, registerEnumType } from 'type-graphql';
 
 // Not sure if there is a better or more type safe way to do this
 export enum SearchableEvidenceField {
@@ -40,5 +40,8 @@ export class EvidenceSearchArgs {
       { field: SearchableEvidenceField.spoken, weight: 1 },
     ] as EvidenceSearchField[],
   })
-  fields?: EvidenceSearchField[];
+  fields: EvidenceSearchField[];
+
+  @Field((type) => [Int], { nullable: true })
+  evidenceSets?: number[];
 }
