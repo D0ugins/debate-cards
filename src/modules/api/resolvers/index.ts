@@ -19,3 +19,4 @@ export * from './evidence';
 export * from './file';
 export * from './round';
 export * from './evidenceBucket';
+export * from './evidenceSet';
